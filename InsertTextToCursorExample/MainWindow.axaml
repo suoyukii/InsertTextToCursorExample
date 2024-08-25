@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="InsertTextToCursorExample.MainWindow"
+        Title="InsertTextToCursorExample" Width="600" Height="200" WindowStartupLocation="CenterScreen">
+    <Window.Styles>
+        <Style Selector="TextBox">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+    </Window.Styles>
+    <Grid RowDefinitions="*,*" ColumnDefinitions="4*,*">
+        <TextBox Grid.Row="0" Grid.Column="0" Name="text1" Text="Test text" />
+        <Button Grid.Row="0" Grid.Column="1" Content="Start" Tapped="StartInsert"
+                ToolTip.Tip="Insert text at the cursor position after five seconds" />
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="text2" />
+    </Grid>
+</Window>
